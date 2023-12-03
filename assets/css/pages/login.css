@@ -1,0 +1,191 @@
+/* :: SCREEN :: */
+.screen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('./../../images/backgrounds/02.png') left center no-repeat;
+}
+.screen::before {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 40%;
+  background: url('../../images/backgrounds/01.png');
+  background-position: center;
+  background-size: cover;
+}
+.screen::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  left: 54%;
+  transform: skewX(-27.2deg);
+  background: transparent linear-gradient(193deg, #03DAD1 0%, #1B64A3 100%);
+}
+
+/* float-images */
+.screen .float-img {
+  position: absolute;
+  z-index: 2;
+  opacity: .3;
+}
+.screen .float-img:nth-child(1) {
+  top: 10%;
+  right: 6%;
+}
+.screen .float-img:nth-child(2) {
+  bottom: 10%;
+  right: 30%;
+}
+
+/* logo */
+.screen .logo {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 47%;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(180deg, #1963A2 0%, #03DAD1 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen .logo img {
+  width: 160px;
+}
+.screen .logo::before {
+  position: absolute;
+  content: '';
+  left: 4px;
+  top: 4px;
+  bottom: 4px;
+  right: 4px;
+  background: transparent linear-gradient(147deg, #E2E2E2 0%, #FFFFFF 100%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* title */
+.screen div.title {
+  position: relative;
+  background-color: #fff;
+  display: inline-block;
+  padding: 10px 60px;
+  border-radius: 500px;
+  margin-bottom: 45px;
+}
+.screen div.title::before {
+  position: absolute;
+  content: '';
+  left: 4px;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: linear-gradient(to right, #fff 30%, rgba(3, 217, 206, .1) 100%);
+  border-radius: 500px;
+  z-index: 1;
+}
+.screen div.title .title {
+  position: relative;
+  z-index: 2;
+  font-size: 26px;
+  font-weight: 800;
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.screen div.title .title-2 {
+  position: relative;
+  z-index: 2;
+  font-size: 22.5px;
+  font-weight: 400;
+  color: var(--LOGO_TEXT_COLOR);
+}
+
+/* login-form */
+.screen .login-form .form-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen .login-form .form-title div {
+  font-size: 24px;
+  font-weight: 800;
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.screen .login-form .form-title span {
+  font-size: 20px;
+  color: var(--LOGO_TEXT_COLOR);
+}
+.screen .login-form .form-title i {
+  font-size: 28px;
+  font-weight: 800;
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* login-label */
+.screen .login-form .input-g {
+  width: 350px;
+  margin: 0 auto;
+}
+.screen .login-form .login-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.screen .login-form .login-label .right-icon {
+  position: absolute;
+  right: 10px;
+  color: var(--BLUE);
+  font-size: 20px;
+}
+.screen .login-form .login-label .left-icon {
+  position: absolute;
+  left: 10px;
+  color: var(--BLUE);
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.screen .login-form .login-label .login-input {
+  background-color: #fff;
+  border: 1px solid var(--BLUE);
+  border-radius: 8px;
+  padding: 10px 38px 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 100%;
+}
+
+/* required */
+.screen .login-form .input-g.required .login-input {
+  border-color: var(--RED);
+}
+.screen .login-form .input-g.required .login-input::placeholder,
+.screen .login-form .input-g.required .right-icon {
+  color: var(--RED);
+}
+.screen .login-form .input-g .login-required-text {
+  display: none;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 4px;
+  color: var(--RED);
+}
+.screen .login-form .input-g.required .login-required-text {
+  display: block;
+}
+/* ---------------------- */

@@ -1,0 +1,216 @@
+/* :: NAVBAR :: */
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  width:100%;
+  z-index: 99;
+  position: fixed;
+  padding: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 0 27px #AFBDCA57;
+}
+
+/* logo */
+.navbar-logo img {
+  width: 60px;
+  margin-left: 20px;
+}
+.navbar-logo .logo-text {
+  border-right: 2px solid var(--BORDER);
+  padding-right: 20px;
+}
+.navbar-logo .logo-text .title {
+  font-size: 16px;
+  font-weight: 800;
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-logo .logo-text .title-2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--LOGO_TEXT_COLOR);
+}
+
+/* options */
+.navbar .options .option {
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  position: relative;
+  border-radius: 50%;
+  align-items: center;
+  display: inline-flex;
+  color: #fff;
+  justify-content: center;
+  background-color: var(--ORANGE);
+  transition: all .15s ease-in-out;
+}
+.navbar .options .user-option {
+  background-color: var(--YELLOW);
+  color: var(--OCEAN);
+}
+.navbar .options .notification-option {
+  background-color: var(--GREEN);
+}
+.navbar .options .option.active::before {
+  position: absolute;
+  content: '';
+  top: 4px;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--RED);
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+/* -------------------------- */
+
+/* :: SIDEBAR :: */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 120px 20px;
+  background-color: #ddd;
+  display: flex;
+  z-index: 90;
+  align-items: center;
+  justify-content: center;
+  background: var(--SIDEBAR_BG);
+}
+
+/* item */
+.sidebar .item {
+  position: relative;
+}
+.sidebar .item .link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.sidebar .item .icon {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transition: background-color .15s ease-in-out;
+}
+.sidebar .item:not(.active):hover .icon {
+  background-color: rgba(255, 255, 255, .2);
+}
+.sidebar .item .icon i {
+  font-size: 26px;
+  color: #fff;
+}
+
+/* data-title */
+.sidebar .item::before {
+  position: absolute;
+  content: attr(data-title);
+  right: calc(100% + 30px);
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  visibility: hidden;
+  white-space: nowrap;
+  box-shadow: 0 0 10px #AFBDCA57;
+  opacity: 0;
+  transition: all .15s ease-in-out;
+}
+.sidebar .item:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* active */
+.sidebar .item.active .icon {
+  background-color: #fff;
+  border: 2px solid var(--PRIMARY);
+}
+.sidebar .item.active .icon i {
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* -------------------------- */
+
+/* :: MAIN-CONTENT :: */
+.main-content {
+  width: calc(100% - 106px);
+  margin-right: auto;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.page-title {
+  display: flex;
+  align-items: center;
+}
+.page-title h2 {
+  font-size: 20px;
+}
+.page-title h2:nth-child(1) {
+  font-weight: 700;
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 3px;
+}
+.page-title h2:nth-child(2) {
+  color: var(--LOGO_TEXT_COLOR);
+}
+.main-content .content {
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid var(--BORDER);
+}
+.main-content .content.--bg-trasparent {
+  background-color: transparent;
+  border: 0;
+  padding: 30px 0;
+}
+/* -------------------------- */
+
+/* :: Custom DataTable :: */
+.table-container {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.dataTable {
+  border-radius: 12px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.dataTable thead th span {
+  display: block;
+  white-space: nowrap;
+}
+.dataTable thead th span.ar-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.dataTable thead th span.en-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+/* hide search dataTables_filter and dataTables_length */
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_length {
+  display: none;
+}
+/* -------------------------- */

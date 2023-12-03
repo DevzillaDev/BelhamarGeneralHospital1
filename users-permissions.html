@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- :: Meta Tags :: -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home page description">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="keywords" content="dashboard, dashboard">
+  <meta name="theme-color" content="#0060fe">
+  <meta name="title" content="Home page">
+  <meta name="language" content="ar">
+  <!-- :: Favicon :: -->
+  <link rel="shortcut icon" href="assets/images/theme/favicon.png" type="image/x-icon">
+  <!-- :: CSS Files :: -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="assets/css/libs/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/theme/bundle.css">
+  <link rel="stylesheet" href="assets/css/theme/style.css">
+  <link rel="stylesheet" href="assets/css/pages/users-permissions.css">
+  <title>مستشفى بللحمر العام | ملفات المرضي</title>
+</head>
+<body data-current-page="users-permissions">
+
+  <!-- :: MAIN :: -->
+  <main class="d-flex align-items-start justify-content-start">
+    <!-- :: NAVBAR :: -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- right-content -->
+          <div class="right-content d-flex align-items-center">
+            <!-- logo -->
+            <div class="navbar-logo d-flex align-items-center">
+              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <!-- logo-text -->
+              <div class="logo-text">
+                <h1 class="title">مستشفى بللحمـر العـــام</h1>
+                <h2 class="title-2">BLHAMAR GENERAL HOSPITAL</h2>
+              </div>
+            </div>
+          </div>
+          <!-- user-area -->
+          <div class="user-area position-relative d-flex align-items-center">
+            <!-- options -->
+            <div class="options d-flex align-items-center" data-gap-x="10px">
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option">
+                <i class="fi fi-rr-refresh"></i>
+              </a>
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option notification-option active">
+                <i class="fi fi-rr-bell"></i>
+              </a>
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option user-option">
+                <i class="fi fi-rr-user"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- :: SIDEBAR :: -->
+    <div class="sidebar">
+      <!-- items -->
+      <div class="items d-flex flex-column" data-gap-y="20px">
+        <!-- item -->
+        <div class="item" data-title="الرئيسية">
+          <a href="./" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-home"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="ملفات المرضي">
+          <a href="./patient-files.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-folder"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="بحث">
+          <a href="./search-page.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-discover"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="ملف جديد">
+          <a href="./new-file.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-add-document"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item active" data-title="صلاحيات المستخدمين">
+          <a href="./users-permissions.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-user-shield"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="تسجيل خروج">
+          <a href="#" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-sign-out-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- :: MAIN-CONTENT :: -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <!-- top-section -->
+        <div class="top-section d-flex align-items-center justify-content-between">
+          <!-- page-title -->
+          <div class="page-title">
+            <h2>ملفـــــات صلاحيــــــات المستخدمين</h2>
+            <h2>/ Users Permissions File</h2>
+          </div>
+          <!-- buttons -->
+          <div class="buttons d-flex align-items-center" data-gap-x="15px">
+            <button type="button" class="theme-btn --btn-fill-primary" data-toggle="modal" data-modal="addNewUser">
+              <i class="fi fi-rr-user-add"></i>
+              اضافة مستخدم / Add User
+            </button>
+            <button type="button" class="theme-btn --btn-fill-danger">
+              <i class="fi fi-rr-circle-xmark"></i>
+              خروج / Exit
+            </button>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="content pb-0">
+          <!-- table-container -->
+          <div class="table-container">
+            <!-- table -->
+            <table id="usersTable" class="cell-border users-table">
+              <thead>
+                <tr>
+                  <th data-name="User_Name">
+                    <span class="ar-text">إسم المستخدم</span>
+                    <span class="en-text">User Name / </span>
+                  </th>
+                  <th data-name="User_No">
+                    <span class="ar-text">رقم المستخدم</span>
+                    <span class="en-text">User_No / </span>
+                  </th>
+                  <th data-name="Actions">
+                    <span class="ar-text">الحدث</span>
+                    <span class="en-text">Actions / </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-name="User_Name">Rashed</td>
+                  <td data-name="User_No">123</td>
+                  <td data-name="Actions">
+                    <!-- buttons -->
+                    <div class="buttons d-flex align-items-center justify-content-center" data-gap-x="15px">
+                      <button class="theme-btn --btn-fill-success --btn-sm">
+                        <i class="fi fi-rr-eye"></i>
+                        عرض / View
+                      </button>
+                      <button class="theme-btn --btn-fill-primary --btn-sm">
+                        <i class="fi fi-rr-file-edit"></i>
+                        تعديل / Edit
+                      </button>
+                      <button class="theme-btn --btn-fill-danger --btn-sm">
+                        <i class="fi fi-rr-trash"></i>
+                        حذف / Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="User_Name">Rashed</td>
+                  <td data-name="User_No">123</td>
+                  <td data-name="Actions">
+                    <!-- buttons -->
+                    <div class="buttons d-flex align-items-center justify-content-center" data-gap-x="15px">
+                      <button class="theme-btn --btn-fill-success --btn-sm">
+                        <i class="fi fi-rr-eye"></i>
+                        عرض / View
+                      </button>
+                      <button class="theme-btn --btn-fill-primary --btn-sm">
+                        <i class="fi fi-rr-file-edit"></i>
+                        تعديل / Edit
+                      </button>
+                      <button class="theme-btn --btn-fill-danger --btn-sm">
+                        <i class="fi fi-rr-trash"></i>
+                        حذف / Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="User_Name">Rashed</td>
+                  <td data-name="User_No">123</td>
+                  <td data-name="Actions">
+                    <!-- buttons -->
+                    <div class="buttons d-flex align-items-center justify-content-center" data-gap-x="15px">
+                      <button class="theme-btn --btn-fill-success --btn-sm">
+                        <i class="fi fi-rr-eye"></i>
+                        عرض / View
+                      </button>
+                      <button class="theme-btn --btn-fill-primary --btn-sm">
+                        <i class="fi fi-rr-file-edit"></i>
+                        تعديل / Edit
+                      </button>
+                      <button class="theme-btn --btn-fill-danger --btn-sm">
+                        <i class="fi fi-rr-trash"></i>
+                        حذف / Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="User_Name">Rashed</td>
+                  <td data-name="User_No">123</td>
+                  <td data-name="Actions">
+                    <!-- buttons -->
+                    <div class="buttons d-flex align-items-center justify-content-center" data-gap-x="15px">
+                      <button class="theme-btn --btn-fill-success --btn-sm">
+                        <i class="fi fi-rr-eye"></i>
+                        عرض / View
+                      </button>
+                      <button class="theme-btn --btn-fill-primary --btn-sm">
+                        <i class="fi fi-rr-file-edit"></i>
+                        تعديل / Edit
+                      </button>
+                      <button class="theme-btn --btn-fill-danger --btn-sm">
+                        <i class="fi fi-rr-trash"></i>
+                        حذف / Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="User_Name">Rashed</td>
+                  <td data-name="User_No">123</td>
+                  <td data-name="Actions">
+                    <!-- buttons -->
+                    <div class="buttons d-flex align-items-center justify-content-center" data-gap-x="15px">
+                      <button class="theme-btn --btn-fill-success --btn-sm">
+                        <i class="fi fi-rr-eye"></i>
+                        عرض / View
+                      </button>
+                      <button class="theme-btn --btn-fill-primary --btn-sm">
+                        <i class="fi fi-rr-file-edit"></i>
+                        تعديل / Edit
+                      </button>
+                      <button class="theme-btn --btn-fill-danger --btn-sm">
+                        <i class="fi fi-rr-trash"></i>
+                        حذف / Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td data-name="User_Name">Rashed</td>
+                  <td data-name="User_No">123</td>
+                  <td data-name="Actions">
+                    <!-- buttons -->
+                    <div class="buttons d-flex align-items-center justify-content-center" data-gap-x="15px">
+                      <button class="theme-btn --btn-fill-success --btn-sm">
+                        <i class="fi fi-rr-eye"></i>
+                        عرض / View
+                      </button>
+                      <button class="theme-btn --btn-fill-primary --btn-sm">
+                        <i class="fi fi-rr-file-edit"></i>
+                        تعديل / Edit
+                      </button>
+                      <button class="theme-btn --btn-fill-danger --btn-sm">
+                        <i class="fi fi-rr-trash"></i>
+                        حذف / Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" data-modal-id="addNewUser">
+    <!-- modal-content -->
+    <div class="modal-content">
+      <!-- modal-head -->
+      <div class="modal-head">
+        <h5 class="modal-title">معالجة بيانات المستخدم / PROCESSING OF USER DATA</h5>
+        <button type="button" class="modal-close-btn" data-dismiss="modal">
+          <i class="fi fi-rr-cross-small"></i>
+        </button>
+      </div>
+      <!-- modal-body -->
+      <div class="modal-body">
+        <!-- row -->
+        <div class="row" data-gap-y="30px">
+          <!-- col - User Name -->
+          <div class="col-12">
+            <!-- f-g -->
+            <div class="f-g">
+              <label for="#">إسم المستخدم / User Name</label>
+              <div class="th-input-with-icon">
+                <i class="fi fi-rr-user"></i>
+                <input type="text" name="" class="th-input w-100" required>
+              </div>
+              <div class="required-text">هذا الحقل مطلوب</div>
+            </div>
+          </div>
+          <!-- col - User_No -->
+          <div class="col-6">
+            <!-- f-g -->
+            <div class="f-g">
+              <label for="#">رقم المستخدم / User_No</label>
+              <div class="th-input-with-icon">
+                <i class="fi fi-rr-file"></i>
+                <input type="number" name="" class="th-input w-100" min="0" required>
+              </div>
+              <div class="required-text">هذا الحقل مطلوب</div>
+            </div>
+          </div>
+          <!-- col - Password -->
+          <div class="col-6">
+            <!-- f-g -->
+            <div class="f-g">
+              <label for="#">الرقم السري / Password</label>
+              <div class="th-input-with-icon">
+                <i class="fi fi-rr-lock"></i>
+                <input type="password" name="" class="th-input w-100" min="0" required>
+              </div>
+              <div class="required-text">هذا الحقل مطلوب</div>
+            </div>
+          </div>
+          <!-- col - Checkbox -->
+          <div class="col-4">
+            <!-- label -->
+            <label class="custom-checkbox-input">ملف الصلاحيات / Permissions File
+              <input type="checkbox" name="search">
+              <div class="checkbox-indicator"></div>
+            </label>
+          </div>
+          <!-- col - Checkbox -->
+          <div class="col-4">
+            <!-- label -->
+            <label class="custom-checkbox-input">تعديل ملف / Edit File
+              <input type="checkbox" name="search">
+              <div class="checkbox-indicator"></div>
+            </label>
+          </div>
+          <!-- col - Checkbox -->
+          <div class="col-4">
+            <!-- label -->
+            <label class="custom-checkbox-input">حذف ملف / Delete File
+              <input type="checkbox" name="search">
+              <div class="checkbox-indicator"></div>
+            </label>
+          </div>
+          <!-- col - Checkbox -->
+          <div class="col-4">
+            <!-- label -->
+            <label class="custom-checkbox-input">ملف جديد / New File
+              <input type="checkbox" name="search">
+              <div class="checkbox-indicator"></div>
+            </label>
+          </div>
+          <!-- col - Checkbox -->
+          <div class="col-4">
+            <!-- label -->
+            <label class="custom-checkbox-input">بحث عن ملف / Search For a File
+              <input type="checkbox" name="search">
+              <div class="checkbox-indicator"></div>
+            </label>
+          </div>
+          <!-- col - Checkbox -->
+          <div class="col-4">
+            <!-- label -->
+            <label class="custom-checkbox-input">طباعة / Print
+              <input type="checkbox" name="search">
+              <div class="checkbox-indicator"></div>
+            </label>
+          </div>
+          <!-- col - buttons -->
+          <div class="col-12">
+            <div class="buttons d-flex align-items-center justify-content-center mt-1" data-gap-x="15px">
+              <button type="button" class="theme-btn --btn-fill-primary">
+                <i class="fi fi-rr-disk"></i>
+                حفظ / Save
+              </button>
+              <button type="button" class="theme-btn --btn-fill-danger" data-dismiss="modal">
+                <i class="fi fi-rr-circle-xmark"></i>
+                إغلاق / Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- :: JS Files :: -->
+  <script src="assets/js/libs/jquery-3.7.0.min.js"></script>
+  <script src="assets/js/libs/jquery-datatable.min.js"></script>
+  <script src="assets/js/theme/bundle.js"></script>
+  <script src="assets/js/theme/script.js"></script>
+</body>
+</html>

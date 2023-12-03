@@ -1,0 +1,39 @@
+/* Users Table */
+table.users-table {
+  background: transparent linear-gradient(0deg, #C5FDFD 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+}
+table.users-table.no-footer {
+  border-color: #1963A2;
+  border-width: 2px;
+}
+
+table.users-table thead {
+  background: transparent linear-gradient(90deg, #1962A1 0%, #08BFC6 100%) 0% 0% no-repeat padding-box;
+}
+table.users-table>thead>tr>th,
+table.users-table>thead>tr>td {
+  border-color: #1963A2 !important;
+  border-width: 2px !important;
+}
+table.users-table thead>tr>th {
+  background: transparent !important;
+  padding: 20px 10px;
+}
+table.users-table thead th:not(:last-child) {
+  border-color: #1963A2;
+  border-width: 2px;
+}
+table.users-table.cell-border>tbody>tr>th,
+table.users-table.cell-border>tbody>tr>td {
+  border-color: #1963A2 !important;
+  border-width: 2px !important;
+  padding: 20px 10px;
+  font-size: 18px;
+}
+
+table.users-table thead th span {
+  display: inline-block;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+/* -------------------------- */

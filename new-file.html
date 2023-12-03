@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- :: Meta Tags :: -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home page description">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="keywords" content="dashboard, dashboard">
+  <meta name="theme-color" content="#0060fe">
+  <meta name="title" content="Home page">
+  <meta name="language" content="ar">
+  <!-- :: Favicon :: -->
+  <link rel="shortcut icon" href="assets/images/theme/favicon.png" type="image/x-icon">
+  <!-- :: CSS Files :: -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="assets/css/libs/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/theme/bundle.css">
+  <link rel="stylesheet" href="assets/css/theme/style.css">
+  <title>مستشفى بللحمر العام | ملف جديد</title>
+</head>
+<body data-current-page="new-file-page">
+
+  <!-- :: MAIN :: -->
+  <main class="d-flex align-items-start justify-content-start">
+    <!-- :: NAVBAR :: -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- right-content -->
+          <div class="right-content d-flex align-items-center">
+            <!-- logo -->
+            <div class="navbar-logo d-flex align-items-center">
+              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <!-- logo-text -->
+              <div class="logo-text">
+                <h1 class="title">مستشفى بللحمـر العـــام</h1>
+                <h2 class="title-2">BLHAMAR GENERAL HOSPITAL</h2>
+              </div>
+            </div>
+          </div>
+          <!-- user-area -->
+          <div class="user-area position-relative d-flex align-items-center">
+            <!-- options -->
+            <div class="options d-flex align-items-center" data-gap-x="10px">
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option">
+                <i class="fi fi-rr-refresh"></i>
+              </a>
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option notification-option active">
+                <i class="fi fi-rr-bell"></i>
+              </a>
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option user-option">
+                <i class="fi fi-rr-user"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- :: SIDEBAR :: -->
+    <div class="sidebar">
+      <!-- items -->
+      <div class="items d-flex flex-column" data-gap-y="20px">
+        <!-- item -->
+        <div class="item" data-title="الرئيسية">
+          <a href="./" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-home"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="ملفات المرضي">
+          <a href="./patient-files.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-folder"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="بحث">
+          <a href="./search-page.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-discover"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item active" data-title="ملف جديد">
+          <a href="./new-file.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-add-document"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="صلاحيات المستخدمين">
+          <a href="./users-permissions.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-user-shield"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="تسجيل خروج">
+          <a href="#" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-sign-out-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- :: MAIN-CONTENT :: -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <!-- top-section -->
+        <div class="top-section d-flex align-items-center justify-content-between">
+          <!-- page-title -->
+          <div class="page-title">
+            <h2>إنشاء ملف جديد</h2>
+            <h2>/ Create New File</h2>
+          </div>
+          <!-- buttons -->
+          <div class="buttons d-flex align-items-center" data-gap-x="15px">
+            <button type="button" class="theme-btn --btn-fill-primary">
+              <i class="fi fi-rr-disk"></i>
+              حفظ / Save
+            </button>
+            <button type="button" class="theme-btn --btn-fill-danger">
+              <i class="fi fi-rr-circle-xmark"></i>
+              إغلاق / Close
+            </button>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="content --bg-trasparent">
+          <!-- form -->
+          <form action="#">
+            <!-- row -->
+            <div class="row" data-gap-y="20px">
+              <!-- col - File_No -->
+              <div class="col-4">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">رقم الملف / File_No</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-file"></i>
+                    <input type="number" name="" class="th-input w-100" min="0" required disabled value="91250">
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - ID Number -->
+              <div class="col-4">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">رقم الهوية / ID Number</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-id-badge"></i>
+                    <input type="number" name="" class="th-input w-100" min="0" required value="123456789">
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Date -->
+              <div class="col-4">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">التاريخ / Date</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-calendar-lines"></i>
+                    <input type="date" name="date" class="th-input text-right w-100" min="0" required value="2023-01-08">
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - First Name -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">الإسم الأول / First Name</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-user"></i>
+                    <input type="text" name="firstName" class="th-input w-100" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Father Name -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">إسم الأب / Father Name</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-user"></i>
+                    <input type="text" name="fatherName" class="th-input w-100" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - G.Father Name -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">إسم الجد / G.Father Name</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-user"></i>
+                    <input type="text" name="" class="th-input w-100" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Family Name -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">إسم العائلة / Family Name</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-user"></i>
+                    <input type="text" name="" class="th-input w-100" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Nationality -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">الجنسية / Nationality</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-earth-americas"></i>
+                    <input type="text" name="" class="th-input w-100" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Age -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">العمر / Age</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-calendar-lines"></i>
+                    <input type="number" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Sex -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">الجنس / Sex</label>
+                  <div class="th-select-with-icon">
+                    <i class="fi fi-rr-user"></i>
+                    <select name="" class="th-input w-100">
+                      <option value="male">Male</option>
+                      <option value="female" selected>Female</option>
+                    </select>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Address -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">العنوان / Address</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-marker"></i>
+                    <input type="text" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Relation -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">القرابة / Relation</label>
+                  <div class="th-select-with-icon">
+                    <i class="fi fi-rr-users-alt"></i>
+                    <select name="" class="th-input w-100">
+                      <option value="">0</option>
+                      <option value="" selected>0</option>
+                      <option value="">0</option>
+                      <option value="">0</option>
+                      <option value="">0</option>
+                      <option value="">0</option>
+                    </select>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Phone -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">الهاتف / Phone</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-phone-flip"></i>
+                    <input type="tel" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Mobile No 1 -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">الجوال 1 / Mobile No 1</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-mobile-button"></i>
+                    <input type="tel" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Mobile No 2 -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">الجوال 2 / Mobile No 2</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-mobile-button"></i>
+                    <input type="tel" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Govt - Pvt -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">حكومي - خاص / Govt - Pvt</label>
+                  <div class="th-select-with-icon">
+                    <i class="fi fi-rr-users-alt"></i>
+                    <select name="" class="th-input w-100">
+                      <option value="">0</option>
+                      <option value="" selected>Governmental</option>
+                    </select>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Employer's Name -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">إسم الموظف / Employer's Name</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-id-card-clip-alt"></i>
+                    <input type="text" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Employer's Address -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">عنوان الموظف / Employer's Address</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-marker"></i>
+                    <input type="text" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Relative -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">اسم احد الاقرباء / Relative</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-user"></i>
+                    <input type="text" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Tel -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">هاتف / Tel</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-phone-flip"></i>
+                    <input type="tel" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Mobile No 1 -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">جوال / Mobile</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-mobile-button"></i>
+                    <input type="tel" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Refered From -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">محول من / Refered From</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-move-to-folder"></i>
+                    <input type="text" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Pch - No -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">برقم / Pch - No</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-memo"></i>
+                    <input type="number" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Clinic -->
+              <div class="col-3">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">القسم - العيادة / Clinic</label>
+                  <div class="th-input-with-icon">
+                    <i class="fi fi-rr-hospital"></i>
+                    <input type="text" name="" class="th-input w-100" min="0" required>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+              <!-- col - Notes -->
+              <div class="col-9">
+                <!-- f-g -->
+                <div class="f-g">
+                  <label for="#">ملاحظات / Notes</label>
+                  <div class="th-input-with-icon --has-textarea">
+                    <i class="fi fi-rr-edit"></i>
+                    <textarea name="" class="th-input w-100" rows="1"></textarea>
+                  </div>
+                  <div class="required-text">هذا الحقل مطلوب</div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- :: JS Files :: -->
+  <script src="assets/js/libs/jquery-3.7.0.min.js"></script>
+  <script src="assets/js/libs/jquery-datatable.min.js"></script>
+  <script src="assets/js/theme/bundle.js"></script>
+  <script src="assets/js/theme/script.js"></script>
+</body>
+</html>

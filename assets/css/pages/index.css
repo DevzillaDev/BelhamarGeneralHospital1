@@ -1,0 +1,105 @@
+/* :: SECTION-I :: */
+
+/* details */
+.se-i .details .icon {
+  width: 107px;
+  height: 107px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent linear-gradient(0deg, #FFFFFF 0%, #DFDFDF 100%) 0% 0% no-repeat padding-box;
+  border: 2px solid var(--PRIMARY);
+  margin-left: 20px;
+}
+.se-i .details .icon i {
+  font-size: 46px;
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* title */
+.se-i .details .text .title {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.2;
+  background: var(--PRIMARY_TEXT_GRADIENT);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.se-i .details .text .title-2 {
+  font-size: 21.2px;
+  font-weight: 400;
+  color: var(--LOGO_TEXT_COLOR);
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* para-1 */
+.se-i .details .para-1 {
+  font-size: 25px;
+  max-width: 1030px;
+  text-align: justify;
+}
+
+/* boxes */
+.se-i .boxes .box {
+  background-color: #fff;
+  box-sizing: 0 0 15px #CEE2F1;
+  border-radius: 12px;
+  padding: 30px 25px;
+  height: 100%;
+  box-shadow: 0px 0px 15px #CEE2F1;
+}
+.se-i .boxes .box-icon img {
+  width: 70px;
+}
+.se-i .boxes .box .box-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--PRIMARY);
+}
+.se-i .boxes .box .box-sub-title {
+  font-size: 17px;
+  color: var(--PRIMARY);
+  font-weight: 500;
+}
+.se-i .boxes .box .box-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.se-i .boxes .box .box-text.en-text {
+  font-size: 14px;
+}
+
+/* box-1 */
+.se-i .boxes .box.box-1 .box-title,
+.se-i .boxes .box.box-1 .box-sub-title {
+  color: var(--YELLOW);
+}
+
+/* box-2 */
+.se-i .boxes .box.box-2 .box-title,
+.se-i .boxes .box.box-2 .box-sub-title {
+  color: #8670E5;
+}
+
+/* box-3 */
+.se-i .boxes .box.box-3 .box-title,
+.se-i .boxes .box.box-3 .box-sub-title {
+  color: #65D4A6;
+}
+
+/* box-4 */
+.se-i .boxes .box.box-4 .box-title,
+.se-i .boxes .box.box-4 .box-sub-title {
+  color: var(--RED);
+}
+
+/* box-5 */
+.se-i .boxes .box.box-5 .box-title,
+.se-i .boxes .box.box-5 .box-sub-title {
+  color: var(--BLUE);
+}
+/* -------------------------- */

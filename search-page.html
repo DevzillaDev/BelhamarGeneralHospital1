@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- :: Meta Tags :: -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home page description">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="keywords" content="dashboard, dashboard">
+  <meta name="theme-color" content="#0060fe">
+  <meta name="title" content="Home page">
+  <meta name="language" content="ar">
+  <!-- :: Favicon :: -->
+  <link rel="shortcut icon" href="assets/images/theme/favicon.png" type="image/x-icon">
+  <!-- :: CSS Files :: -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel="stylesheet" href="assets/css/libs/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/theme/bundle.css">
+  <link rel="stylesheet" href="assets/css/theme/style.css">
+  <title>مستشفى بللحمر العام | بحث</title>
+</head>
+<body data-current-page="search-page">
+
+  <!-- :: MAIN :: -->
+  <main class="d-flex align-items-start justify-content-start">
+    <!-- :: NAVBAR :: -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- right-content -->
+          <div class="right-content d-flex align-items-center">
+            <!-- logo -->
+            <div class="navbar-logo d-flex align-items-center">
+              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <!-- logo-text -->
+              <div class="logo-text">
+                <h1 class="title">مستشفى بللحمـر العـــام</h1>
+                <h2 class="title-2">BLHAMAR GENERAL HOSPITAL</h2>
+              </div>
+            </div>
+          </div>
+          <!-- user-area -->
+          <div class="user-area position-relative d-flex align-items-center">
+            <!-- options -->
+            <div class="options d-flex align-items-center" data-gap-x="10px">
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option">
+                <i class="fi fi-rr-refresh"></i>
+              </a>
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option notification-option active">
+                <i class="fi fi-rr-bell"></i>
+              </a>
+              <!-- option -->
+              <a href="#" aria-label="#" aria-label="Link" class="option user-option">
+                <i class="fi fi-rr-user"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- :: SIDEBAR :: -->
+    <div class="sidebar">
+      <!-- items -->
+      <div class="items d-flex flex-column" data-gap-y="20px">
+        <!-- item -->
+        <div class="item" data-title="الرئيسية">
+          <a href="./" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-home"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="ملفات المرضي">
+          <a href="./patient-files.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-folder"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item active" data-title="بحث">
+          <a href="./search-page.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-discover"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="ملف جديد">
+          <a href="./new-file.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-add-document"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="صلاحيات المستخدمين">
+          <a href="./users-permissions.html" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-user-shield"></i>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="item" data-title="تسجيل خروج">
+          <a href="#" aria-label="#" class="link"></a>
+          <div class="icon">
+            <i class="fi fi-rr-sign-out-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- :: MAIN-CONTENT :: -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <!-- top-section -->
+        <div class="top-section">
+          <!-- content -->
+          <div class="content">
+            <!-- search-form -->
+            <form action="#" class="search-form">
+              <!-- row -->
+              <div class="row small-gutters">
+                <!-- col -->
+                <div class="col-7">
+                  <!-- search-area -->
+                  <div class="search-area mr-auto">
+                    <label for="search" class="theme-search-label-1">
+                      <input type="text" name="search" id="search-input" placeholder="بحث ..." class="theme-search-input-1 --has-bg w-100">
+                      <button type="button" class="search-rounded-btn" id="search-btn">
+                        <i class="fi fi-rr-search"></i>
+                      </button>
+                    </label>
+                  </div>
+                </div>
+                <!-- col -->
+                <div class="col-5">
+                  <!-- buttons -->
+                  <div class="buttons d-flex align-items-center w-100" data-gap-x="15px">
+                    <button type="button" class="theme-btn --btn-fill-primary w-50">
+                      <i class="fi fi-rr-print"></i>
+                      طباعة / Print
+                    </button>
+                    <button type="button" class="theme-btn --btn-fill-danger w-50">
+                      <i class="fi fi-rr-cross-circle"></i>
+                      الغاء البحث / Cancel
+                    </button>
+                  </div>
+                </div>
+                <!-- col -->
+                <div class="col-12 mt-2">
+                  <!-- row -->
+                  <div class="row" data-gap-y="15px">
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحـــــث بــالإســـــم / By Name
+                        <input type="radio" name="search" checked="checked">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحــث برقـم الملـــف / By File_No
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحـــث بإسـم مرافــق المريـــض / By Relative Name
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحــــث برقم الهوية / By ID_No
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحـــث بإســم العيـــادة / By Clinic
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحـــث بجـــوال مرافق المريض / By Relative Mobile
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحث بهاتف المريض / By Tel_No
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحـث بجـوال المريـض / By Mobile
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                    <!-- col -->
+                    <div class="col-3">
+                      <!-- label -->
+                      <label class="custom-radio-input">بحث بهاتف مرافق المريض / BY RELATIVE TEL_NO
+                        <input type="radio" name="search">
+                        <div class="radio-indicator"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="content pb-0">
+          <!-- table-container -->
+          <div class="table-container">
+            <!-- table -->
+            <table id="patientTable" class="cell-border">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th data-name="File_No">
+                    <span class="ar-text">رقم الملف</span>
+                    <span class="en-text">File_No</span>
+                  </th>
+                  <th data-name="Type">
+                    <span class="ar-text">النوع</span>
+                    <span class="en-text">Type</span>
+                  </th>
+                  <th data-name="ID_Number">
+                    <span class="ar-text">رقم الهوية</span>
+                    <span class="en-text">ID Number</span>
+                  </th>
+                  <th data-name="Date">
+                    <span class="ar-text">التاريخ</span>
+                    <span class="en-text">Date</span>
+                  </th>
+                  <th data-name="First_Name">
+                    <span class="ar-text">الإسم الأول</span>
+                    <span class="en-text">First Name</span>
+                  </th>
+                  <th data-name="Father_Name">
+                    <span class="ar-text">اسم الأب</span>
+                    <span class="en-text">Father Name</span>
+                  </th>
+                  <th data-name="G.Father_Name">
+                    <span class="ar-text">اسم الجد</span>
+                    <span class="en-text">G.Father Name</span>
+                  </th>
+                  <th data-name="Family_Name">
+                    <span class="ar-text">اسم العائلة</span>
+                    <span class="en-text">Family Name</span>
+                  </th>
+                  <th data-name="Nationality">
+                    <span class="ar-text">الجنسية</span>
+                    <span class="en-text">Nationality</span>
+                  </th>
+                  <th data-name="Age">
+                    <span class="ar-text">العمر</span>
+                    <span class="en-text">Age</span>
+                  </th>
+                  <th data-name="Sex">
+                    <span class="ar-text">الجنس</span>
+                    <span class="en-text">Sex</span>
+                  </th>
+                  <th data-name="Address">
+                    <span class="ar-text">العنوان</span>
+                    <span class="en-text"><Address></Address></span>
+                  </th>
+                  <th data-name="Mobile_Number">
+                    <span class="ar-text">رقم الجوال</span>
+                    <span class="en-text">Mobile Number</span>
+                  </th>
+                  <th data-name="Work_For">
+                    <span class="ar-text">يعمل لدى</span>
+                    <span class="en-text">Work For</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label for="">
+                      <input type="checkbox">
+                    </label>
+                  </td>
+                  <td data-name="File_No">201451212</td>
+                  <td data-name="Type">New</td>
+                  <td data-name="ID_Number">12045554</td>
+                  <td data-name="Date">2/5/2023</td>
+                  <td data-name="First_Name">Hossam</td>
+                  <td data-name="Father_Name">Saleh</td>
+                  <td data-name="G.Father_Name">Ali</td>
+                  <td data-name="Family_Name">AL-AHMARI</td>
+                  <td data-name="Nationality">Saudi</td>
+                  <td data-name="Age">28</td>
+                  <td data-name="Sex">Male</td>
+                  <td data-name="Address">Sabah, Ballahmar, Assir, KSA</td>
+                  <td data-name="Mobile_Number">072840110</td>
+                  <td data-name="Work_For">Al-Rowad Company</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- :: JS Files :: -->
+  <script src="assets/js/libs/jquery-3.7.0.min.js"></script>
+  <script src="assets/js/libs/jquery-datatable.min.js"></script>
+  <script src="assets/js/theme/bundle.js"></script>
+  <script src="assets/js/theme/script.js"></script>
+</body>
+</html>
