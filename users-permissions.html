@@ -32,7 +32,11 @@
           <div class="right-content d-flex align-items-center">
             <!-- logo -->
             <div class="navbar-logo d-flex align-items-center">
-              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <img src="./assets/images/logos/logo.png" class="img-fluid d-md-block d-none" alt="Logo">
+              <!-- sidebar-toggler -->
+              <div class="sidebar-toggler d-md-none d-inline-flex align-items-center ml-1" id="sidebar-toggler">
+                <i class="fi fi-rr-menu-burger"></i>
+              </div>
               <!-- logo-text -->
               <div class="logo-text">
                 <h1 class="title">مستشفى بللحمـر العـــام</h1>
@@ -62,11 +66,11 @@
       </div>
     </nav>
     <!-- :: SIDEBAR :: -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <!-- items -->
       <div class="items d-flex flex-column" data-gap-y="20px">
         <!-- item -->
-        <div class="item" data-title="الرئيسية">
+        <div class="item active" data-title="الرئيسية">
           <a href="./" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-home"></i>
@@ -94,7 +98,7 @@
           </div>
         </div>
         <!-- item -->
-        <div class="item active" data-title="صلاحيات المستخدمين">
+        <div class="item" data-title="صلاحيات المستخدمين">
           <a href="./users-permissions.html" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-user-shield"></i>
@@ -113,14 +117,14 @@
     <div class="main-content">
       <div class="container-fluid">
         <!-- top-section -->
-        <div class="top-section d-flex align-items-center justify-content-between">
+        <div class="top-section d-flex align-items-center justify-content-between flex-xl-row flex-column">
           <!-- page-title -->
-          <div class="page-title">
+          <div class="page-title mb-xl-0 mb-2">
             <h2>ملفـــــات صلاحيــــــات المستخدمين</h2>
             <h2>/ Users Permissions File</h2>
           </div>
           <!-- buttons -->
-          <div class="buttons d-flex align-items-center" data-gap-x="15px">
+          <div class="buttons d-flex align-items-center flex-wrap" data-gap-x="15px" data-gap-y="15px">
             <button type="button" class="theme-btn --btn-fill-primary" data-toggle="modal" data-modal="addNewUser">
               <i class="fi fi-rr-user-add"></i>
               اضافة مستخدم / Add User

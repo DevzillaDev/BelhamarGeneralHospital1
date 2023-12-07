@@ -87,4 +87,9 @@
     $('.modal').fadeOut(150);
   });
 
+  // Sidebar Functions
+  $('#sidebar-toggler').on('click', function() {
+    $('#sidebar').toggleClass('show');
+  });
+
 }(jQuery));

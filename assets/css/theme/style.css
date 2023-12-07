@@ -32,6 +32,14 @@
   font-weight: 500;
   color: var(--LOGO_TEXT_COLOR);
 }
+@media (max-width: 767px) {
+  .navbar-logo .logo-text .title {
+    font-size: 14px;
+  }
+  .navbar-logo .logo-text .title-2 {
+    font-size: 12px;
+  }
+}
 
 /* options */
 .navbar .options .option {
@@ -65,6 +73,13 @@
   border-radius: 50%;
   border: 2px solid #fff;
 }
+@media (max-width: 767px) {
+  .navbar .options .option {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+}
 /* -------------------------- */
 
 /* :: SIDEBAR :: */
@@ -77,9 +92,25 @@
   background-color: #ddd;
   display: flex;
   z-index: 90;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background: var(--SIDEBAR_BG);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (max-width: 767px) {
+  .sidebar {
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: -10px 0 30px 0 rgba(0, 0, 0, .2);
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: all .15s ease-in-out;
+  }
+  .sidebar.show {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 /* item */
@@ -109,6 +140,24 @@
 .sidebar .item .icon i {
   font-size: 26px;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .sidebar .items {
+    row-gap: 10px !important;
+  }
+  .sidebar .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .sidebar .item .icon {
+    width: 40px;
+    height: 40px;
+    display: none;
+  }
+  .sidebar .item .icon i {
+    font-size: 18px;
+  }
 }
 
 /* data-title */
@@ -144,6 +193,24 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 767px) {
+  .sidebar .item::before {
+    width: 100%;
+    position: relative;
+    right: unset;
+    top: unset;
+    transform: unset;
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    color: #fff;
+    box-shadow: unset;
+  }
+  .sidebar .item.active::before {
+    background-color: #fff;
+    color: var(--OCEAN);
+  }
+}
 /* -------------------------- */
 
 /* :: MAIN-CONTENT :: */
@@ -153,6 +220,13 @@
   padding-top: 120px;
   padding-bottom: 60px;
   transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media (max-width: 767px) {
+  .main-content {
+    width: 100%;
+    margin-right: auto;
+    padding-top: 60px;
+  }
 }
 .page-title {
   display: flex;
@@ -182,6 +256,16 @@
   background-color: transparent;
   border: 0;
   padding: 30px 0;
+}
+@media (max-width: 1199px) {
+  .main-content .content {
+    padding: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .page-title {
+    flex-direction: column;
+  }
 }
 /* -------------------------- */
 

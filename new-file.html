@@ -14,7 +14,6 @@
   <link rel="shortcut icon" href="assets/images/theme/favicon.png" type="image/x-icon">
   <!-- :: CSS Files :: -->
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-  <link rel="stylesheet" href="assets/css/libs/jquery.dataTables.min.css">
   <link rel="stylesheet" href="assets/css/theme/bundle.css">
   <link rel="stylesheet" href="assets/css/theme/style.css">
   <title>مستشفى بللحمر العام | ملف جديد</title>
@@ -31,7 +30,11 @@
           <div class="right-content d-flex align-items-center">
             <!-- logo -->
             <div class="navbar-logo d-flex align-items-center">
-              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <img src="./assets/images/logos/logo.png" class="img-fluid d-md-block d-none" alt="Logo">
+              <!-- sidebar-toggler -->
+              <div class="sidebar-toggler d-md-none d-inline-flex align-items-center ml-1" id="sidebar-toggler">
+                <i class="fi fi-rr-menu-burger"></i>
+              </div>
               <!-- logo-text -->
               <div class="logo-text">
                 <h1 class="title">مستشفى بللحمـر العـــام</h1>
@@ -61,11 +64,11 @@
       </div>
     </nav>
     <!-- :: SIDEBAR :: -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <!-- items -->
       <div class="items d-flex flex-column" data-gap-y="20px">
         <!-- item -->
-        <div class="item" data-title="الرئيسية">
+        <div class="item active" data-title="الرئيسية">
           <a href="./" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-home"></i>
@@ -86,7 +89,7 @@
           </div>
         </div>
         <!-- item -->
-        <div class="item active" data-title="ملف جديد">
+        <div class="item" data-title="ملف جديد">
           <a href="./new-file.html" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-add-document"></i>
@@ -112,14 +115,14 @@
     <div class="main-content">
       <div class="container-fluid">
         <!-- top-section -->
-        <div class="top-section d-flex align-items-center justify-content-between">
+        <div class="top-section d-flex align-items-center justify-content-between flex-lg-row flex-column">
           <!-- page-title -->
-          <div class="page-title">
+          <div class="page-title mb-lg-0 mb-2">
             <h2>إنشاء ملف جديد</h2>
             <h2>/ Create New File</h2>
           </div>
           <!-- buttons -->
-          <div class="buttons d-flex align-items-center" data-gap-x="15px">
+          <div class="buttons d-flex align-items-center flex-wrap" data-gap-x="15px" data-gap-y="15px">
             <button type="button" class="theme-btn --btn-fill-primary">
               <i class="fi fi-rr-disk"></i>
               حفظ / Save
@@ -137,7 +140,7 @@
             <!-- row -->
             <div class="row" data-gap-y="20px">
               <!-- col - File_No -->
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">رقم الملف / File_No</label>
@@ -149,7 +152,7 @@
                 </div>
               </div>
               <!-- col - ID Number -->
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">رقم الهوية / ID Number</label>
@@ -161,7 +164,7 @@
                 </div>
               </div>
               <!-- col - Date -->
-              <div class="col-4">
+              <div class="col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">التاريخ / Date</label>
@@ -173,7 +176,7 @@
                 </div>
               </div>
               <!-- col - First Name -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">الإسم الأول / First Name</label>
@@ -185,7 +188,7 @@
                 </div>
               </div>
               <!-- col - Father Name -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">إسم الأب / Father Name</label>
@@ -197,7 +200,7 @@
                 </div>
               </div>
               <!-- col - G.Father Name -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">إسم الجد / G.Father Name</label>
@@ -209,7 +212,7 @@
                 </div>
               </div>
               <!-- col - Family Name -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">إسم العائلة / Family Name</label>
@@ -221,7 +224,7 @@
                 </div>
               </div>
               <!-- col - Nationality -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">الجنسية / Nationality</label>
@@ -233,7 +236,7 @@
                 </div>
               </div>
               <!-- col - Age -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">العمر / Age</label>
@@ -245,7 +248,7 @@
                 </div>
               </div>
               <!-- col - Sex -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">الجنس / Sex</label>
@@ -260,7 +263,7 @@
                 </div>
               </div>
               <!-- col - Address -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">العنوان / Address</label>
@@ -272,7 +275,7 @@
                 </div>
               </div>
               <!-- col - Relation -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">القرابة / Relation</label>
@@ -291,7 +294,7 @@
                 </div>
               </div>
               <!-- col - Phone -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">الهاتف / Phone</label>
@@ -303,7 +306,7 @@
                 </div>
               </div>
               <!-- col - Mobile No 1 -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">الجوال 1 / Mobile No 1</label>
@@ -315,7 +318,7 @@
                 </div>
               </div>
               <!-- col - Mobile No 2 -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">الجوال 2 / Mobile No 2</label>
@@ -327,7 +330,7 @@
                 </div>
               </div>
               <!-- col - Govt - Pvt -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">حكومي - خاص / Govt - Pvt</label>
@@ -342,7 +345,7 @@
                 </div>
               </div>
               <!-- col - Employer's Name -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">إسم الموظف / Employer's Name</label>
@@ -354,7 +357,7 @@
                 </div>
               </div>
               <!-- col - Employer's Address -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">عنوان الموظف / Employer's Address</label>
@@ -366,7 +369,7 @@
                 </div>
               </div>
               <!-- col - Relative -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">اسم احد الاقرباء / Relative</label>
@@ -378,7 +381,7 @@
                 </div>
               </div>
               <!-- col - Tel -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">هاتف / Tel</label>
@@ -390,7 +393,7 @@
                 </div>
               </div>
               <!-- col - Mobile No 1 -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">جوال / Mobile</label>
@@ -402,7 +405,7 @@
                 </div>
               </div>
               <!-- col - Refered From -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">محول من / Refered From</label>
@@ -414,7 +417,7 @@
                 </div>
               </div>
               <!-- col - Pch - No -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">برقم / Pch - No</label>
@@ -426,7 +429,7 @@
                 </div>
               </div>
               <!-- col - Clinic -->
-              <div class="col-3">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">القسم - العيادة / Clinic</label>
@@ -438,7 +441,7 @@
                 </div>
               </div>
               <!-- col - Notes -->
-              <div class="col-9">
+              <div class="col-xl-9">
                 <!-- f-g -->
                 <div class="f-g">
                   <label for="#">ملاحظات / Notes</label>
@@ -458,7 +461,6 @@
 
   <!-- :: JS Files :: -->
   <script src="assets/js/libs/jquery-3.7.0.min.js"></script>
-  <script src="assets/js/libs/jquery-datatable.min.js"></script>
   <script src="assets/js/theme/bundle.js"></script>
   <script src="assets/js/theme/script.js"></script>
 </body>

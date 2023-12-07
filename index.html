@@ -31,7 +31,11 @@
           <div class="right-content d-flex align-items-center">
             <!-- logo -->
             <div class="navbar-logo d-flex align-items-center">
-              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <img src="./assets/images/logos/logo.png" class="img-fluid d-md-block d-none" alt="Logo">
+              <!-- sidebar-toggler -->
+              <div class="sidebar-toggler d-md-none d-inline-flex align-items-center ml-1" id="sidebar-toggler">
+                <i class="fi fi-rr-menu-burger"></i>
+              </div>
               <!-- logo-text -->
               <div class="logo-text">
                 <h1 class="title">مستشفى بللحمـر العـــام</h1>
@@ -61,7 +65,7 @@
       </div>
     </nav>
     <!-- :: SIDEBAR :: -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <!-- items -->
       <div class="items d-flex flex-column" data-gap-y="20px">
         <!-- item -->
@@ -111,17 +115,17 @@
     <!-- :: MAIN-CONTENT :: -->
     <div class="main-content">
       <!-- :: SECTION-I :: -->
-      <div class="se-i px-5 pt-3">
+      <div class="se-i px-xl-5 px-md-3 px-2 pt-3">
         <!-- row -->
         <div class="row">
           <!-- col -->
-          <div class="col-8">
+          <div class="col-xl-8">
             <!-- details -->
             <div class="details">
               <!-- flex -->
-              <div class="d-flex">
+              <div class="d-md-flex">
                 <!-- icon -->
-                <div class="icon">
+                <div class="icon mb-md-0 mb-2">
                   <i class="fi fi-rr-doctor"></i>
                 </div>
                 <!-- text -->
@@ -136,7 +140,7 @@
             </div>
           </div>
           <!-- col -->
-          <div class="col-4">
+          <div class="col-xl-4 d-xl-block d-none">
             <!-- image -->
             <img src="assets/images/images/01.png" class="image img-fluid" alt="Image">
           </div>
@@ -145,9 +149,9 @@
             <!-- boxes -->
             <div class="boxes">
               <!-- row -->
-              <div class="row">
+              <div class="row" data-gap-y="30px">
                 <!-- col -->
-                <div class="col">
+                <div class="col-xl col-lg-4 col-md-6">
                   <!-- box -->
                   <div class="box box-1">
                     <!-- box-icon -->
@@ -165,7 +169,7 @@
                   </div>
                 </div>
                 <!-- col -->
-                <div class="col">
+                <div class="col-xl col-lg-4 col-md-6">
                   <!-- box -->
                   <div class="box box-2">
                     <!-- box-icon -->
@@ -183,7 +187,7 @@
                   </div>
                 </div>
                 <!-- col -->
-                <div class="col">
+                <div class="col-xl col-lg-4 col-md-6">
                   <!-- box -->
                   <div class="box box-3">
                     <!-- box-icon -->
@@ -201,7 +205,7 @@
                   </div>
                 </div>
                 <!-- col -->
-                <div class="col">
+                <div class="col-xl col-lg-4 col-md-6">
                   <!-- box -->
                   <div class="box box-4">
                     <!-- box-icon -->
@@ -219,7 +223,7 @@
                   </div>
                 </div>
                 <!-- col -->
-                <div class="col">
+                <div class="col-xl col-lg-4 col-md-6">
                   <!-- box -->
                   <div class="box box-5">
                     <!-- box-icon -->

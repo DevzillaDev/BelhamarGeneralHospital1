@@ -32,7 +32,11 @@
           <div class="right-content d-flex align-items-center">
             <!-- logo -->
             <div class="navbar-logo d-flex align-items-center">
-              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <img src="./assets/images/logos/logo.png" class="img-fluid d-md-block d-none" alt="Logo">
+              <!-- sidebar-toggler -->
+              <div class="sidebar-toggler d-md-none d-inline-flex align-items-center ml-1" id="sidebar-toggler">
+                <i class="fi fi-rr-menu-burger"></i>
+              </div>
               <!-- logo-text -->
               <div class="logo-text">
                 <h1 class="title">مستشفى بللحمـر العـــام</h1>
@@ -62,18 +66,18 @@
       </div>
     </nav>
     <!-- :: SIDEBAR :: -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <!-- items -->
       <div class="items d-flex flex-column" data-gap-y="20px">
         <!-- item -->
-        <div class="item" data-title="الرئيسية">
+        <div class="item active" data-title="الرئيسية">
           <a href="./" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-home"></i>
           </div>
         </div>
         <!-- item -->
-        <div class="item active" data-title="ملفات المرضي">
+        <div class="item" data-title="ملفات المرضي">
           <a href="./patient-files.html" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-folder"></i>
@@ -113,31 +117,33 @@
     <div class="main-content">
       <div class="container-fluid">
         <!-- top-section -->
-        <div class="top-section d-flex align-items-center justify-content-between">
+        <div class="top-section d-flex align-items-center justify-content-between flex-wrap flex-lg-row flex-column" data-gap-y="30px">
           <!-- page-title -->
           <div class="page-title">
             <h2>ملفـــــات المـــــرضـــــي</h2>
             <h2>/ Patient's Files</h2>
           </div>
-          <!-- search-area -->
-          <div class="search-area mr-auto ml-1">
-            <label for="search" class="theme-search-label-1">
-              <input type="text" name="search" id="search-input" placeholder="بحث ..." class="theme-search-input-1">
-              <button type="button" class="search-rounded-btn" id="search-btn">
-                <i class="fi fi-rr-search"></i>
+          <div class="d-flex align-items-center justify-content-between flex-lg-row flex-column justify-content-center mr-lg-auto mx-xl-0 mx-auto" data-gap-y="15px">
+            <!-- search-area -->
+            <div class="search-area ml-lg-1">
+              <label for="search" class="theme-search-label-1">
+                <input type="text" name="search" id="search-input" placeholder="بحث ..." class="theme-search-input-1">
+                <button type="button" class="search-rounded-btn" id="search-btn">
+                  <i class="fi fi-rr-search"></i>
+                </button>
+              </label>
+            </div>
+            <!-- buttons -->
+            <div class="buttons d-flex align-items-center flex-wrap" data-gap-x="15px" data-gap-y="15px">
+              <button type="button" class="theme-btn --btn-fill-primary">
+                <i class="fi fi-rr-file-edit"></i>
+                تعديل / Edit
               </button>
-            </label>
-          </div>
-          <!-- buttons -->
-          <div class="buttons d-flex align-items-center" data-gap-x="15px">
-            <button type="button" class="theme-btn --btn-fill-primary">
-              <i class="fi fi-rr-file-edit"></i>
-              تعديل / Edit
-            </button>
-            <button type="button" class="theme-btn --btn-fill-danger">
-              <i class="fi fi-rr-trash"></i>
-              حذف / Delete
-            </button>
+              <button type="button" class="theme-btn --btn-fill-danger">
+                <i class="fi fi-rr-trash"></i>
+                حذف / Delete
+              </button>
+            </div>
           </div>
         </div>
         <!-- content -->

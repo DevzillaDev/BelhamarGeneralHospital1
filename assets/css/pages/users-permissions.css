@@ -36,4 +36,10 @@ table.users-table thead th span {
   font-size: 20px !important;
   font-weight: bold !important;
 }
+@media (max-width: 1199px) {
+  table.users-table thead th span,
+  table.users-table.cell-border>tbody>tr>th, table.users-table.cell-border>tbody>tr>td {
+    font-size: 16px !important;
+  }
+}
 /* -------------------------- */

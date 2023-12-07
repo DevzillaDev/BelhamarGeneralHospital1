@@ -31,7 +31,11 @@
           <div class="right-content d-flex align-items-center">
             <!-- logo -->
             <div class="navbar-logo d-flex align-items-center">
-              <img src="./assets/images/logos/logo.png" class="img-fluid" alt="Logo">
+              <img src="./assets/images/logos/logo.png" class="img-fluid d-md-block d-none" alt="Logo">
+              <!-- sidebar-toggler -->
+              <div class="sidebar-toggler d-md-none d-inline-flex align-items-center ml-1" id="sidebar-toggler">
+                <i class="fi fi-rr-menu-burger"></i>
+              </div>
               <!-- logo-text -->
               <div class="logo-text">
                 <h1 class="title">مستشفى بللحمـر العـــام</h1>
@@ -61,11 +65,11 @@
       </div>
     </nav>
     <!-- :: SIDEBAR :: -->
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <!-- items -->
       <div class="items d-flex flex-column" data-gap-y="20px">
         <!-- item -->
-        <div class="item" data-title="الرئيسية">
+        <div class="item active" data-title="الرئيسية">
           <a href="./" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-home"></i>
@@ -79,7 +83,7 @@
           </div>
         </div>
         <!-- item -->
-        <div class="item active" data-title="بحث">
+        <div class="item" data-title="بحث">
           <a href="./search-page.html" aria-label="#" class="link"></a>
           <div class="icon">
             <i class="fi fi-rr-discover"></i>
@@ -118,13 +122,13 @@
             <!-- search-form -->
             <form action="#" class="search-form">
               <!-- row -->
-              <div class="row small-gutters">
+              <div class="row small-gutters" data-gap-y="15px">
                 <!-- col -->
-                <div class="col-7">
+                <div class="col-xl-7 col-lg-6">
                   <!-- search-area -->
                   <div class="search-area mr-auto">
                     <label for="search" class="theme-search-label-1">
-                      <input type="text" name="search" id="search-input" placeholder="بحث ..." class="theme-search-input-1 --has-bg w-100">
+                      <input type="text" name="search" id="search-input" placeholder="بحث ..." class="theme-search-input-1 --has-bg w-100 min-w-auto">
                       <button type="button" class="search-rounded-btn" id="search-btn">
                         <i class="fi fi-rr-search"></i>
                       </button>
@@ -132,17 +136,23 @@
                   </div>
                 </div>
                 <!-- col -->
-                <div class="col-5">
-                  <!-- buttons -->
-                  <div class="buttons d-flex align-items-center w-100" data-gap-x="15px">
-                    <button type="button" class="theme-btn --btn-fill-primary w-50">
-                      <i class="fi fi-rr-print"></i>
-                      طباعة / Print
-                    </button>
-                    <button type="button" class="theme-btn --btn-fill-danger w-50">
-                      <i class="fi fi-rr-cross-circle"></i>
-                      الغاء البحث / Cancel
-                    </button>
+                <div class="col-xl-5 col-lg-6">
+                  <!-- row -->
+                  <div class="row small-gutters" data-gap-y="15px">
+                    <!-- col -->
+                    <div class="col-lg-6">
+                      <button type="button" class="theme-btn --btn-fill-primary w-100">
+                        <i class="fi fi-rr-print"></i>
+                        طباعة / Print
+                      </button>
+                    </div>
+                    <!-- col -->
+                    <div class="col-lg-6">
+                      <button type="button" class="theme-btn --btn-fill-danger w-100">
+                        <i class="fi fi-rr-cross-circle"></i>
+                        الغاء البحث / Cancel
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <!-- col -->
@@ -150,7 +160,7 @@
                   <!-- row -->
                   <div class="row" data-gap-y="15px">
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحـــــث بــالإســـــم / By Name
                         <input type="radio" name="search" checked="checked">
@@ -158,7 +168,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحــث برقـم الملـــف / By File_No
                         <input type="radio" name="search">
@@ -166,7 +176,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحـــث بإسـم مرافــق المريـــض / By Relative Name
                         <input type="radio" name="search">
@@ -174,7 +184,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحــــث برقم الهوية / By ID_No
                         <input type="radio" name="search">
@@ -182,7 +192,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحـــث بإســم العيـــادة / By Clinic
                         <input type="radio" name="search">
@@ -190,7 +200,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحـــث بجـــوال مرافق المريض / By Relative Mobile
                         <input type="radio" name="search">
@@ -198,7 +208,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحث بهاتف المريض / By Tel_No
                         <input type="radio" name="search">
@@ -206,7 +216,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحـث بجـوال المريـض / By Mobile
                         <input type="radio" name="search">
@@ -214,7 +224,7 @@
                       </label>
                     </div>
                     <!-- col -->
-                    <div class="col-3">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
                       <!-- label -->
                       <label class="custom-radio-input">بحث بهاتف مرافق المريض / BY RELATIVE TEL_NO
                         <input type="radio" name="search">

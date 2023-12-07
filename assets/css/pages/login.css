@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   background: url('./../../images/backgrounds/02.png') left center no-repeat;
+  overflow: hidden;
 }
 .screen::before {
   position: absolute;
@@ -26,6 +27,15 @@
   left: 54%;
   transform: skewX(-27.2deg);
   background: transparent linear-gradient(193deg, #03DAD1 0%, #1B64A3 100%);
+}
+@media (max-width: 1199px) {
+  .screen {
+    background-size: cover;
+  }
+  .screen::before,
+  .screen::after {
+    display: none;
+  }
 }
 
 /* float-images */
@@ -72,6 +82,11 @@
   border-radius: 50%;
   z-index: -1;
 }
+@media (max-width: 1199px) {
+  .screen .logo {
+    display: none;
+  }
+}
 
 /* title */
 .screen div.title {
@@ -109,8 +124,23 @@
   font-weight: 400;
   color: var(--LOGO_TEXT_COLOR);
 }
+@media (max-width: 1199px) {
+  .screen div.title {
+    padding: 10px 50px;
+  }
+  .screen div.title .title {
+    font-size: 20px;
+  }
+  .screen div.title .title-2 {
+    font-size: 18.5px;
+  }
+}
 
 /* login-form */
+.screen .login-form {
+  position: relative;
+  z-index: 2;
+}
 .screen .login-form .form-title {
   display: flex;
   align-items: center;
@@ -134,10 +164,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 1199px) {
+  .screen .login-form .form-title div {
+    font-size: 20px;
+  }
+  .screen .login-form .form-title i {
+    font-size: 25px;
+  }
+}
 
 /* login-label */
 .screen .login-form .input-g {
-  width: 350px;
+  min-width: 350px;
   margin: 0 auto;
 }
 .screen .login-form .login-label {
@@ -168,6 +206,9 @@
   font-size: 16px;
   font-weight: 700;
   min-width: 100%;
+}
+@media (max-width: 1199px) {
+
 }
 
 /* required */
